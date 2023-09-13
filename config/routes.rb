@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "welcome#index"
+
+  get "/login", to: "login#create"
+  get "/create_account", to: "user#create"
 end
