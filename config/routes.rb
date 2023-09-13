@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   root "welcome#index"
 
   get "/login", to: "login#create"
-  get "/create_account", to: "user#create"
+  get "/create_account", to: "user#new"
 end
