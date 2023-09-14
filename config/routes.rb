@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   get "/login", to: "login#create"
   get "/create_account", to: "user#new"
+
+  get "/spotify", to: "spotify#index"
 end
