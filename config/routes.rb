@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get "/create_account", to: "user#new"
 
   get "/spotify", to: "spotify#index"
+  get "/spotify_oa", to: "spotify#oauth"
+  
 end
