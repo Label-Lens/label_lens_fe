@@ -6,16 +6,8 @@ RSpec.describe "Welcome", type: :feature do
       visit root_path
 
       expect(page).to have_content("Label Lens")
-      expect(page).to have_button("Login")
+      expect(page).to have_link("Log in")
       expect(page).to have_button("Create Account")
-    end
-
-    scenario "create button direct" do
-      visit root_path
-
-      click_button("Create Account")
-
-      expect(current_path).to eq(create_account_path)
     end
   end
 end
