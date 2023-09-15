@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create 
-    user = User.find_by(email: params[:email])
+    user = UserFacade.get_user(params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
       redirect_to spotify_oa_path
@@ -12,4 +12,5 @@ class SessionsController < ApplicationController
       redirect_to login_path
     end
   end
+
 end

@@ -3,13 +3,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = UserFacade.create_user(user_params)
-    
+    user = UserFacade.get_or_create_user(user_params)
   end
 
   private 
 
   def user_params 
-    params.permit(:email, :password, :password_confirmation)
+    params.permit(:email)
   end 
 end

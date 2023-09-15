@@ -4,7 +4,7 @@ describe UserService do
   describe "class methods" do 
     describe ".create_user_request" do 
       it "can create a user" do 
-        response = UserService.create_user_request(
+        response = UserService.get_or_create_user_request(
           {
             email: "doot@doot.com",
             password: "test123",

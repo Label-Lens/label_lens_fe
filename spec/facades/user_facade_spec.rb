@@ -4,7 +4,7 @@ RSpec.describe UserFacade do
   describe "class methods" do
     describe ".create_user" do 
       it "can create a user" do 
-        user = UserFacade.create_user(
+        user = UserFacade.get_or_create_user(
           {
             email: "doot@doot.com",
             password: "test123",
