@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   get "/spotify", to: "spotify#index"
   get "/spotify_oa", to: "spotify#oauth"
-
   
+  post "/login", to: "sessions#create"
+
 end
