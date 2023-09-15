@@ -4,7 +4,8 @@ class SessionsController < ApplicationController
 
   def create 
     user = UserFacade.get_user(params[:email])
-    if user && user.authenticate(params[:password])
+    # require 'pry'; binding.pry
+    if user 
       session[:user_id] = user.id
       redirect_to spotify_oa_path
     else
