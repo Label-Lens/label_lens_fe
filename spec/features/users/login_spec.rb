@@ -37,7 +37,7 @@ RSpec.describe "User Login", type: :feature do
 
       expect(current_path).to eq(login_path)
 
-      # expect(page).to have_content("Your email or password was incorrect.")
+      expect(page).to have_content("Your email or password was incorrect.")
     end
   end
 end

@@ -8,8 +8,8 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to spotify_oa_path
     else
-      redirect_to login_path
       flash[:error] = "Your email or password was incorrect."
+      redirect_to login_path
     end
   end
 end
