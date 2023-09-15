@@ -4,10 +4,13 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "welcome#index"
 
-  get "/login", to: "login#create"
-  get "/create_account", to: "user#new"
+  get "/login", to: "sessions#new"
+
+  get "/register", to: "users#new"
+  post "/register", to: "users#create"
 
   get "/spotify", to: "spotify#index"
   get "/spotify_oa", to: "spotify#oauth"
+
   
 end
