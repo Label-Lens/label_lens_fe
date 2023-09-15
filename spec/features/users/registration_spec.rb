@@ -16,7 +16,7 @@ RSpec.describe "User registration", type: :feature do
       click_on "Create Account"
 
       expect(current_path).to eq(root_path)
-      expect(page).to have_button "Log in"
+      expect(page).to have_link("Log in")
     end
   end
 end
