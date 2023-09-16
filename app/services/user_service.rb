@@ -7,6 +7,7 @@ class UserService
     response = conn('users').get do |faraday| 
       faraday.params['email'] = user_params[:email]
     end
+    require 'pry'; binding.pry
     JSON.parse(response.body, symbolize_names: true)
   end
 
