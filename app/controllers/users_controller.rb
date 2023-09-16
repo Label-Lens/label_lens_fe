@@ -3,19 +3,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.new(user_params)
-    if user.save
-      session[:user_id] = user.id
-      redirect_to root_path
-    else  
-      flash[:error] = user.errors.full_messages.to_sentence
-      redirect_to register_path
-    end 
+    user = UserFacade.get_or_create_user(user_params)
   end
 
   private 
 
   def user_params 
-    params.permit(:email, :password, :password_confirmation)
+    params.permit(:email)
   end 
 end
