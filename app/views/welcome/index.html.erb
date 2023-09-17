@@ -14,4 +14,8 @@
       <%= button_to "Create Account", register_path, method: :get %>
     </div>
   </div>
+
+
 </div>
+
+<%= button_to 'Sign in with Spotify', "http://localhost:3000/auth/spotify", method: :post, data: {turbo: false} %>
