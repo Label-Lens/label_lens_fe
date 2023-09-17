@@ -14,5 +14,7 @@ Rails.application.routes.draw do
 
   get "/spotify", to: "spotify#index"
   get "/spotify_oa", to: "spotify#oauth"
+  get "/spotify_search", to: "spotify#search"
+  get "/album_search", to: "spotify#album"
   
 end
