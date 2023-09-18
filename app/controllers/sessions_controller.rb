@@ -3,11 +3,11 @@ class SessionsController < ApplicationController
   end
 
   def create 
+    require 'pry'; binding.pry
     user = UserFacade.get_user(params[:email])
-    # require 'pry'; binding.pry
     if user 
       session[:user_id] = user.id
-      redirect_to spotify_oa_path
+      # redirect_to spotify_oa_path
     else
       flash[:error] = "Your email or password was incorrect."
       redirect_to login_path
