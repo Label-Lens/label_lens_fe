@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     user = UserFacade.get_user(params[:email])
     if user 
       session[:user_id] = user.id
-      redirect_to spotify_oa_path
+      # redirect_to spotify_oa_path
     else
       flash[:error] = "Your email or password was incorrect."
       redirect_to login_path
