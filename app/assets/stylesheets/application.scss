@@ -25,7 +25,7 @@
 /* Container for your app content and toggle button */
 .container {
   font-family: "copperplate", fantasy;
-  color: rgba(168, 10, 176, 0.624);
+  color: rgba(157, 18, 164, 0.661);
   position: center; /* Required for absolute positioning */
   /* Add any other styles for your app container here */
   padding-top: 100px;
@@ -45,4 +45,9 @@
 .dark-mode {
   color: pink;
   background-image: linear-gradient(to left, #684E76, #5B4766, #4B3D52, #322C35, #171618);
+}
+
+.custom-button {
+  background-color: #7a5a8b; /* Change this to your desired color */
+  color: rgb(12, 2, 2); /* Text color for contrast */
 }
