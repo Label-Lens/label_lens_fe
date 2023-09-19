@@ -18,6 +18,31 @@
 
 @media only screen{
   body {
-    background-color: rgb(118, 10, 145);
+    background-image: linear-gradient(to left, #684E76, #B894B2, #A57EAA, #9584AE, #736C9E  );
   }
+}
+
+/* Container for your app content and toggle button */
+.container {
+  font-family: "copperplate", fantasy;
+  color: rgba(168, 10, 176, 0.624);
+  position: center; /* Required for absolute positioning */
+  /* Add any other styles for your app container here */
+  padding-top: 100px;
+  center: 0;
+}
+
+/* Toggle button for light/dark mode */
+#toggle-button {
+  position: relative;
+  top: 10px; /* Adjust the top position to your liking */
+  right: 10px; /* Adjust the right position to your liking */
+  z-index: 1000; /* Ensure it's on top of other elements */
+  color: pink;
+  /* Add any other styles for the toggle button here */
+}
+
+.dark-mode {
+  color: pink;
+  background-image: linear-gradient(to left, #684E76, #5B4766, #4B3D52, #322C35, #171618);
 }
