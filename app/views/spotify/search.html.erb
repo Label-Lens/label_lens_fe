@@ -1,4 +1,4 @@
-<%= form_tag('http://localhost:3000/api/v1/search_album', method: :get) do %>
+<%= form_tag('/albums', method: :get) do %>
   <%= text_field_tag :query, params[:query], placeholder: "Search..." %>
   <%= submit_tag "Search" %>
 <% end %>
