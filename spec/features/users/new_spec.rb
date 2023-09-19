@@ -1,14 +1,15 @@
-# require "rails_helper"
+require "rails_helper"
 
-# RSpec.describe "Welcome", type: :feature do
-#   describe 'user creation form' do
-#     xscenario 'I see a form to create a user' do
-#     visit create_account_path
+RSpec.describe "Passwordless Login", type: :feature do 
+  it "allows a user to login with a magic link" do 
+    visit "/login"
+    
+    within ".col-md-6" do 
+      expect(page).to have_content("Passwordless Login")
+    end
 
-#     fill_in 'Email', with: 'test@example.com'
+      fill_in "email", with: "doot@doot.com"
 
-
-#     click_button 'Create Account'
-#     end
-#   end
-# end
+      click_button "Send Magic Link"
+  end
+end

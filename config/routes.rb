@@ -10,6 +10,4 @@ Rails.application.routes.draw do
   post "/login", to: "users#create"
 
   get "/spotify", to: "spotify#index"
-  get "/spotify_oa", to: "spotify#oauth"
-  
 end
