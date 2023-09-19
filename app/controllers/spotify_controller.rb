@@ -4,4 +4,8 @@ class SpotifyController < ApplicationController
     
   end
 
+  def search
+
+  end
+
 end
