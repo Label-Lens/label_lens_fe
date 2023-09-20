@@ -1,8 +1,21 @@
-<% @albums.each do|album|%>
-<%= album.id%>
-<%= album.label%>
-<%= album.album_name%>
-<%= album.artist%>
-<%= album.image%>
-<%= album.link%>
-<% end%>
+
+<% @albums.each do |album| %>
+ <div class="blog-card">
+    <div class="meta">
+      <div class="photo" style="background-image: url(<%= album.image[:url]%>)"></div>
+      <ul class="details">
+        <li class="listen-on-spotify">
+        	<a href=<%= album.link%> class="rounded-button">
+          	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/232px-Spotify_icon.svg.png"class="spotify-logo">
+          	Listen on Spotify
+        	</a>
+      	</li>
+      </ul>
+    </div>
+    <div class="description">
+      <h1><%= album.album_name%></h1>
+      <h2><%= album.artist%></h2>
+      <h3><%= album.label %></h3>
+    </div>
+  </div>
+<% end %>
