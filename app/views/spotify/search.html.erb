@@ -1,4 +1,5 @@
 <%= form_tag('/albums', method: :get) do %>
-  <%= text_field_tag :query, params[:query], placeholder: "Search..." %>
+  <%= text_field_tag :album, params[:album], placeholder: "Album..." %>
+  <%= text_field_tag :artist, params[:artist], placeholder: "Artist..." %>
   <%= submit_tag "Search" %>
 <% end %>
