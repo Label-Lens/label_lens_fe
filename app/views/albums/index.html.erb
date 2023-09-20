@@ -1,8 +1,10 @@
-<% @albums.each do|album|%>
-<%= album.id%>
-<%= album.label%>
-<%= album.album_name%>
-<%= album.artist%>
-<%= album.image%>
-<%= album.link%>
-<% end%>
+
+<% @albums.each do |album| %>
+  <div class="album">
+  <%= image_tag album.image[:url], alt: album.album_name, class: 'album-image' %>
+  <h2 class="album-name"><%= album.album_name %></h2>
+  <p class="artist"><%= album.artist %></p>
+</div>
+<% end %>
+
+ 
