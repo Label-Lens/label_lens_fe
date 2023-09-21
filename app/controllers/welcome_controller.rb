@@ -11,7 +11,7 @@ class WelcomeController < ApplicationController
       response_type: 'code',
       client_id: client_id,
       scope: scope,
-      redirect_uri: redirect_uri
+      redirect_uri: redirect_uri, allow_other_host: true
       # state: state
     }.to_query
   end
