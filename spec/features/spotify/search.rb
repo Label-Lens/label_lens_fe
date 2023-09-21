@@ -12,8 +12,6 @@ RSpec.describe "Spotify  Search", type: :feature do
       click_button "Search"
 
       expect(current_path).to eq(albums_path)
-      # require 'pry'; binding.pry
-      save_and_open_page
     end
   end
 end

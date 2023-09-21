@@ -41,12 +41,16 @@ body
   width: 8%;
 }
 
+.label-lens-homepage {
+  width: 25%;
+}
+
 .spotify-logo {
   width: 5%;
 }
 
 .container {
-  font-family: "copperplate", fantasy;
+  font-family: "Lucidity Condensed", sans-serif;
   color: rgba(157, 18, 164, 0.661);
   /* Remove unnecessary center property */
   /* Add any other styles for your app container here */
@@ -104,4 +108,53 @@ body
 .custom-button {
   background-color: var(--button-background-light);
   color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .label-lens-logo {
+    width: 50%; /* Adjust the logo size for smaller screens */
+  }
+
+  .label-lens-homepage {
+    width: 50%; /* Adjust the logo size for smaller screens */
+  }
+
+  .spotify-logo {
+    width: 10%; /* Adjust the logo size for smaller screens */
+  }
+
+  .col-md-6 .form-inline {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+  
+
+  .btn-dark {
+    margin-top: 10px; /* Add spacing between fields and button */
+  }
+
+  .container {
+    padding-top: 20px; /* Adjust container padding for smaller screens */
+    width: 70%; /* Adjust container width for smaller screens */
+  }
+
+  .blog-card-container,
+  .blog-card-searched-album {
+    width: 90%; /* Adjust card width for smaller screens */
+  }
+
+  .blog-card-container h1,
+  .blog-card-searched-album h1 {
+    font-size: 1.2rem; /* Adjust heading font size for smaller screens */
+  }
 }
