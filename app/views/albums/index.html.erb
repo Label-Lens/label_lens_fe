@@ -1,7 +1,7 @@
 <%= image_tag('Black Logo.png', alt: 'Label Lens Logo', class: 'label-lens-logo') %>
 
-<h1>Your Searched Album</h1>
 <div class="blog-card-searched-album">
+<h1>Your Searched Album</h1>
   <div class="card mb-3">
     <div class="row no-gutters">
       <div class="col-md-4">
@@ -20,8 +20,8 @@
 </div>
 
 <br><br>
-<h1>Results for <%= @albums[0].label %></h1>
 <div class="blog-card-container">
+<h1>Results for <%= @albums[0].label %></h1>
   <% @albums[1..19].each do |album| %>
     <div class="card mb-3">
       <div class="row no-gutters">

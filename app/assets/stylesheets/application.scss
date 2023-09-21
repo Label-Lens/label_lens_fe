@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: "Lucidity Condensed";
-  src: font-path('lucidity-condensed') format('ttf');
+  src: font-url('lucidity-condensed.ttf');
 }
 
 
@@ -35,7 +35,6 @@ body
   color: var(--text-light);
   padding: 65px;
   overflow-y: auto;
-  
 }
 
 .label-lens-logo {
@@ -62,12 +61,20 @@ body
   max-height: 500px; /* Adjust the height as needed */
   overflow-y: auto;
   width: 25%;
+  h1 {
+    font-family: "Lucidity Condensed", sans-serif;
+    font-size: 1.5rem;
+  }
 }
 
 .blog-card-searched-album {
   max-height: 500px; /* Adjust the height as needed */
   overflow-y: auto;
   width: 25%;
+  h1 {
+    font-family: "Lucidity Condensed", sans-serif;
+    font-size: 1.5rem;
+  }
 }
 
 
@@ -85,10 +92,9 @@ body
   color: pink;
   background-image: linear-gradient(to left, #684E76, #5B4766, #4B3D52, #322C35, #171618);
   background-color: var(--background-dark);
-  h1 {
-    font-family: "Lucidity Condensed", sans-serif;
-  }
 }
+
+
 
 .dark-mode .card-body {
   background: var(--background-dark);
