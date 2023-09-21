@@ -1,18 +1,45 @@
+<%= image_tag('Black Logo.png', alt: 'Label Lens Logo', class: 'label-lens-logo') %>
 
-<% @albums.each do |album| %>
+<h1>Your Searched Album</h1>
+<div class="blog-card-searched-album">
   <div class="card mb-3">
     <div class="row no-gutters">
       <div class="col-md-4">
-        <img src="<%= album.image[:url] %>" class="card-img" alt="Album Cover">
+        <img src="<%= @albums[0].image[:url] %>" class="card-img" alt="Album Cover">
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title"><%= album.album_name %></h5>
-          <p class="card-text"><%= album.artist %></p>
-          <p class="card-text"><%= album.label %></p>
-          <a href="<%= album.link %>" class="btn btn-primary">Listen on Spotify</a>
+          <h5 class="card-title"><%= @albums[0].album_name %></h5>
+          <p class="card-text"><%= @albums[0].artist %></p>
+          <p class="card-text"><%= @albums[0].label %></p>
+          <a href="<%= @albums[0].link %>" class="btn btn-primary">Listen on Spotify</a>
         </div>
       </div>
     </div>
   </div>
-<% end %>
+</div>
+
+<br><br>
+<h1>Results for <%= @albums[0].label %></h1>
+<div class="blog-card-container">
+  <% @albums[1..19].each do |album| %>
+    <div class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="<%= album.image[:url] %>" class="card-img" alt="Album Cover">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><%= album.album_name %></h5>
+            <p class="card-text"><%= album.artist %></p>
+            <p class="card-text"><%= album.label %></p>
+            <a href="<%= album.link %>" class="btn btn-primary">Listen on Spotify</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<br>
+<%= image_tag('powered by spotify - black.png', alt: 'Spotify Icon', class: 'spotify-logo') %>
+
