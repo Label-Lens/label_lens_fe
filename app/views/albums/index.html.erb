@@ -1,6 +1,6 @@
 
 <% @albums.each do |album| %>
- <div class="blog-card">
+  <div class="blog-card">
     <div class="meta">
       <div class="photo" style="background-image: url(<%= album.image[:url]%>)"></div>
       <ul class="details">
@@ -19,3 +19,7 @@
     </div>
   </div>
 <% end %>
+
+<%= link_to "Previous Page", albums_path(page: @current_page.to_i - 1) if @current_page.to_i > 1 %>
+|
+<%= link_to "Next Page", albums_path(page: @current_page.to_i + 1)%>
