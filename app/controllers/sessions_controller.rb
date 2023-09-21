@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create 
-    require 'pry'; binding.pry
+    # require 'pry'; binding.pry
     user = UserFacade.get_user(params[:email])
     if user 
       session[:user_id] = user.id

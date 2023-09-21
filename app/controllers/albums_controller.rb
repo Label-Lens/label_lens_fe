@@ -3,7 +3,7 @@ class AlbumsController < ApplicationController
   
   def index
     # @current_page = params[:page] || 1
-    @albums = AlbumsFacade.get_albums(params[:query]) 
+    @albums = AlbumsFacade.get_albums(params[:album], params[:artist]) 
     # require 'pry'; binding.pry
   end
 end
