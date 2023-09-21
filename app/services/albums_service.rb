@@ -10,7 +10,7 @@ class AlbumsService
 
   def self.conn(endpoint_url) 
     # require 'pry'; binding.pry
-    Faraday.new(url: "#{Rails.application.credentials.urls[:backend]}/api/v1/#{endpoint_url}")
+    Faraday.new(url: "#{Rails.application.credentials.urls[:backend]}api/v1/#{endpoint_url}")
   end
 
 end
