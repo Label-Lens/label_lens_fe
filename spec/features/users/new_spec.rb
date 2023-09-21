@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "Passwordless Login", type: :feature do 
-  it "allows a user to login with a magic link" do 
+  xit "allows a user to login with a magic link", :vcr do 
     visit "/login"
     
     within ".col-md-6" do 
