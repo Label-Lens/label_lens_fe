@@ -1,5 +1,19 @@
-<%= form_tag('/albums', method: :get) do %>
-  <%= text_field_tag :album, params[:album], placeholder: "Album..." %>
-  <%= text_field_tag :artist, params[:artist], placeholder: "Artist..." %>
-  <%= submit_tag "Search" %>
-<% end %>
+<%= image_tag('Black Logo.png', alt: 'Label Lens Logo', class: 'label-lens-logo') %>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <%= form_tag('/albums', method: :get, class: "form-inline text-center") do %>
+        <div class="form-group mx-sm-3 mb-2">
+          <%= text_field_tag :album, params[:album], class: "form-control", placeholder: "Album..." %>
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+          <%= text_field_tag :artist, params[:artist], class: "form-control", placeholder: "Artist..." %>
+        </div>
+          <%= submit_tag "Search", class: "btn btn-dark" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= image_tag('powered by spotify - black.png', alt: 'Spotify Icon', class: 'spotify-logo') %>

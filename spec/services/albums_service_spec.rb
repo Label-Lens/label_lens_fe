@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe AlbumsService do 
   describe "class methods" do
     describe ".find_albums" do
-      it "returns albums" do
+      it "returns albums", :vcr do
         
-        response = AlbumsService.find_albums("Kind of Blue")
+        response = AlbumsService.find_albums("Kind of Blue", "Miles Davis")
 
         expect(response).to be_a(Hash)
         expect(response[:data]).to be_a(Array)
