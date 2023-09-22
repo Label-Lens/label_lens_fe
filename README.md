@@ -10,29 +10,24 @@
 
 ## Background and Description
 
-NOTE: need to add description. Should be more tailored toward what the frontend app does vs what the API does
 
 *Label Lens* provides users with a unique listening experience and solution to the paradox of choice. Reducing the noise from too many options with apps like Spotify or YouTube -- Label Lens curates playlists by selecting albums and artists signed by the same record label as the album selected for listening. Time to tune out the chatter and tune in to your next favorite album with *Label Lens*.
 
-[Render Website]()
-Note: need to add render URL when created
+[Render Website](https://label-lens.onrender.com/)
 
 [Backend Application](https://github.com/Daniel-Gallagher92/label_lens_be)
 
-## Schema 
-need to add screenshot of schema
 
 
 ## Learning Goals
 
 - Consume one external API
-- Implement Circle CI for continuous integration/testing
 - Build APIs that return JSON responses 
 - Use an external OAuth provider to authenticate users 
 - Refactor code for better code organization/readability 
 - Create an application with mircroservices for a seamless, separate frontend view and backend database. 
 - Implement a production-quality user interface using Bootstrap
-- Practice good project management by using project boards, participating in daily stand-ups and team retros 
+- Practice good project management by using a miro project board, participating in daily stand-ups and team retros 
 - Utilize quality workflow practices: small commits, descriptive pull requests, and code reviews 
 - Write thorough, understandable documentation
 
@@ -54,8 +49,10 @@ need to add screenshot of schema
 - Orderly
 - Faraday
 - Bootstrap
-NOTE: add gems as installed
-
+- Omniauth-Spotify
+- Webmock
+- VCR
+  
 ## Setup
 1. Clone this repository:
 On your local machine open a terminal session and enter the following commands for SSH or HTTPS to clone the repositiory.
@@ -175,9 +172,8 @@ If there are any errors, verify that bundler, Rails, and your ruby environment a
 Before using the web application you will need to setup your databases locally by running the following command
 
 ```shell
-$ rails db: {:drop,:create,:migrate,:seed}
+$ rails db:{drop,create,migrate,seed}
 ```
-
 
 5. Startup and Access<br>
 Finally, in order to use the web app you will have to start the server locally and access the app through a web browser. 
@@ -190,15 +186,11 @@ NOTE: add route to navigate to once api is built
     
 At this point you should be taken to a page with an example JSON response for a user
 
-## Endpoints provided 
-```
-NOTE: add api endpoints as built e.g. GET /API/V1/USERS/1
-```
-### put example here 
+## *Label Lens'* Authorization Process:<br>
+Authorization to access the *Label Lens* application is handled using Spotify's authorization flow. Logging in with Spotify allows the user to grant permission to the application only once, making the journey to a user's next favorite album smoother than ever. Below is a diagram of the authorization handshake that occurs between the application, Spotify and the user.<br>   
 
-```
-NOTE: add screenshot here. cannot do screenshot within codeblock 
-```
+![Screenshot 2023-09-22 at 8 51 42 AM](https://github.com/DavisWeimer/label_lens_fe/assets/128431917/6642d5f9-5cfc-411c-af3e-8f56bbe1ff3f)
+
 
 ## **Contributors** ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
@@ -207,15 +199,15 @@ NOTE: add screenshot here. cannot do screenshot within codeblock
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/andilovetto"><img src="https://avatars.githubusercontent.com/u/128431917?s=96&v=4" width="100px;" alt=""/><br /><sub><b>Andi(she/her)</b></sub></a><br /><a href="https://github.com/Daniel-Gallagher92/label_lens_be/commits?author=andilovetto" title="Code">💻</a> <a href="https://github.com/Daniel-Gallagher92/label_lens_be/pulls?q=is%3Apr+author%3Aandilovetto" title="Reviewed Pull Requests">👀</a>
+    <td align="center"><a href="https://github.com/andilovetto"><img src="https://avatars.githubusercontent.com/u/128431917?s=96&v=4" width="100px;" alt=""/><br /><sub><b>Andi(she/her)</b></sub></a><br /><a href="https://github.com/Daniel-Gallagher92/label_lens_be/commits?author=andilovetto" title="Code">💻</a> <a href="https://github.com/Daniel-Gallagher92/label_lens_be/pulls?q=is%3Apr+author%3Aandilovetto" title="Reviewed Pull Requests">👀</a><a href="https://www.linkedin.com/in/andrea-lovetto/" title="LinkedIn">🖇️</a>
      </td>
-       <td align="center"><a href="https://github.com/ChrisAsercion"><img src="https://avatars.githubusercontent.com/u/66049544?v=4" width="100px;" alt=""/><br /><sub><b>Chris(he/him)</b></sub></a><br /><a href="https://github.com/Daniel-Gallagher92/label_lens_be/commits?author=ChrisAsercion" title="Code">💻</a> <a href="https://github.com/Daniel-Gallagher92/label_lens_be/pulls?q=is%3Apr+author%3AChrisAsercion" title="Reviewed Pull Requests">👀</a>
+       <td align="center"><a href="https://github.com/ChrisAsercion"><img src="https://avatars.githubusercontent.com/u/66049544?v=4" width="100px;" alt=""/><br /><sub><b>Chris(he/him)</b></sub></a><br /><a href="https://github.com/Daniel-Gallagher92/label_lens_be/commits?author=ChrisAsercion" title="Code">💻</a> <a href="https://github.com/Daniel-Gallagher92/label_lens_be/pulls?q=is%3Apr+author%3AChrisAsercion" title="Reviewed Pull Requests">👀</a><a href="https://www.linkedin.com/in/chris-asercion-2a7b68135/" title="LinkedIn">🖇️</a>
      </td>
-      <td align="center"><a href="https://github.com/fadwil"><img src="https://avatars.githubusercontent.com/u/128260033?v=4" width="100px;" alt=""/><br /><sub><b>Wil(he/him)</b></sub></a><br /><a href="https://github.com/Daniel-Gallagher92/label_lens_be/commits?author=fadwil" title="Code">💻</a> <a href="https://github.com/Daniel-Gallagher92/label_lens_be/pulls?q=is%3Apr+author%3Afadwil" title="Reviewed Pull Requests">👀</a>
+      <td align="center"><a href="https://github.com/fadwil"><img src="https://avatars.githubusercontent.com/u/128260033?v=4" width="100px;" alt=""/><br /><sub><b>Wil(he/him)</b></sub></a><br /><a href="https://github.com/Daniel-Gallagher92/label_lens_be/commits?author=fadwil" title="Code">💻</a> <a href="https://github.com/Daniel-Gallagher92/label_lens_be/pulls?q=is%3Apr+author%3Afadwil" title="Reviewed Pull Requests">👀</a><a href="https://www.linkedin.com/in/wilfady/" title="LinkedIn">🖇️</a>
      </td>
-      <td align="center"><a href="https://github.com/DavisWeimer"><img src="https://avatars.githubusercontent.com/u/128326999?v=4" width="100px;" alt=""/><br /><sub><b>Davis(he/him)</b></sub></a><br /><a href="https://github.com/Daniel-Gallagher92/label_lens_be/commits?author=DavisWeimer" title="Code">💻</a> <a href="https://github.com/Daniel-Gallagher92/label_lens_be/pulls?q=is%3Apr+author%3ADavisWeimer" title="Reviewed Pull Requests">👀</a>
+      <td align="center"><a href="https://github.com/DavisWeimer"><img src="https://avatars.githubusercontent.com/u/128326999?v=4" width="100px;" alt=""/><br /><sub><b>Davis(he/him)</b></sub></a><br /><a href="https://github.com/Daniel-Gallagher92/label_lens_be/commits?author=DavisWeimer" title="Code">💻</a> <a href="https://github.com/Daniel-Gallagher92/label_lens_be/pulls?q=is%3Apr+author%3ADavisWeimer" title="Reviewed Pull Requests">👀</a><a href="https://www.linkedin.com/in/davis-weimer/" title="LinkedIn">🖇️</a>
      </td>
-      <td align="center"><a href="https://github.com/Daniel-Gallagher92"><img src="https://avatars.githubusercontent.com/u/64923238?v=4" width="100px;" alt=""/><br /><sub><b>Daniel(he/him)</b></sub></a><br /><a href="https://github.com/Daniel-Gallagher92/label_lens_be/commits?author=Daniel-Gallagher92" title="Code">💻</a> <a href="https://github.com/Daniel-Gallagher92/label_lens_be/pulls?q=is%3Apr+author%3ADaniel-Gallagher92" title="Reviewed Pull Requests">👀</a>
+      <td align="center"><a href="https://github.com/Daniel-Gallagher92"><img src="https://avatars.githubusercontent.com/u/64923238?v=4" width="100px;" alt=""/><br /><sub><b>Daniel(he/him)</b></sub></a><br /><a href="https://github.com/Daniel-Gallagher92/label_lens_be/commits?author=Daniel-Gallagher92" title="Code">💻</a> <a href="https://github.com/Daniel-Gallagher92/label_lens_be/pulls?q=is%3Apr+author%3ADaniel-Gallagher92" title="Reviewed Pull Requests">👀</a><a href="https://www.linkedin.com/in/daniel-gallagher-5b29271a1/" title="LinkedIn">🖇️</a>
      </td>
     </tr>
 </table>
